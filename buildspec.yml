@@ -5,6 +5,7 @@ env:
 phases:
   build:
     commands:
+      - pip install git-remote-codecommit
       - git clone codecommit::$AWS_REGION://$REPOSITORY
       - cd aws_tester
       - TAG=$CODEBUILD_BUILD_NUMBER
